@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="team1" id="teamcontainer">
                         <div class="team-leader">
                             <img src="dummy-person.jpg" alt="Team Leader" class="teamleader">
-                            <p>Team Leader</p>
+                            <p>Leader-Gagan</p>
                         </div>
                         <div class="team-member team-member-1">
                             <img src="dummy-person.jpg" alt="Team Member 1" class="mem-1">
@@ -163,7 +163,7 @@ function team1container() {
     teamcontainer.innerHTML = `
             <div class="team-leader">
                 <img src="dummy-person.jpg" alt="Team Leader" class="teamleader">
-                <p>Leader-Alice</p>
+                <p>Leader-Gagan</p>
             </div>
             <div class="team-member team-member-1">
                 <img src="dummy-person.jpg" alt="Team Member 1" class="mem-1">
@@ -186,7 +186,7 @@ function team2container() {
     teamcontainer.innerHTML = `
 <div class="team-leader">
     <img src="dummy-person.jpg" alt="Team Leader" class="teamleader">
-    <p>Team Leader of Team 2</p>
+    <p>Leader-bilaskhan</p>
 </div>
 <div class="team-member team-member-1">
     <img src="dummy-person.jpg" alt="Team Member 1" class="mem-1">
@@ -210,7 +210,7 @@ function team3container() {
     teamcontainer.innerHTML = `
 <div class="team-leader">
     <img src="dummy-person.jpg" alt="Team Leader" class="teamleader">
-    <p>Team Leader of Team 3</p>
+    <p>Leader-Armanpreet Kaur</p>
 </div>
 <div class="team-member team-member-1">
     <img src="dummy-person.jpg" alt="Team Member 1" class="mem-1">
@@ -234,7 +234,7 @@ function team4container() {
     teamcontainer.innerHTML = `
 <div class="team-leader">
     <img src="dummy-person.jpg" alt="Team Leader" class="teamleader">
-    <p>Team Leader of Team 4</p>
+    <p>Leader-Jashan</p>
 </div>
 <div class="team-member team-member-1">
     <img src="dummy-person.jpg" alt="Team Member 1" class="mem-1">
