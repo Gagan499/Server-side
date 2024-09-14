@@ -184,28 +184,27 @@ function memberclicks() {
     const showImage = document.querySelector('.show-image img');
     const memberDetails = showdetails.querySelector('p');
     const calendar = document.getElementById('calendar');
-    const leaves = [1, 5, 7, 10, 11, 16, 15]; // Sample leave days
-
     const members = document.querySelectorAll('.team-member');
-    const assignwork = document.getElementById('assign');
-    const completework = document.getElementById('complete');
-    const assigncompletework = document.getElementById('show-count-task');
-    let count = 5;
 
     members.forEach(member => {
         member.addEventListener('click', () => {
+            const leaves = randomleaves();
             const name = member.querySelector('p').textContent;
             showdetailsfunc(name, showImage, memberDetails, calendar, leaves);
         });
     });
+    members.forEach(member => {
+        const assignwork = document.getElementById('assign');
+        const completework = document.getElementById('complete');
+        const assigncompletework = document.getElementById('show-count-task');
+        let count = Math.floor(Math.random()*10)+1;
 
-    assignwork.addEventListener('click', (event) => {
-        event.preventDefault();
-        assigncompletework.innerHTML = `<p>Assigned Task is ${count + 2}</p>`;
-    });
-    completework.addEventListener('click', (event) => {
-        event.preventDefault();
-        assigncompletework.innerHTML = `<p>completed Task is ${count - 2}</p>`;
+        assignwork.addEventListener('click', () => {
+            assigncompletework.innerHTML = `<p>Assigned Task is ${count}</p>`;
+        });
+        completework.addEventListener('click', () => {
+            assigncompletework.innerHTML = `<p>completed Task is ${count-3}</p>`;
+        })
     })
 }
 
@@ -228,4 +227,14 @@ function showdetailsfunc(name, showImage, memberDetails, calendar, leaves) {
         }
         calendar.appendChild(day);
     }
+}
+
+function randomleaves() {
+    let leavesarray = [];
+    let maxleave = 10;
+    while (leavesarray.length <= maxleave) {
+        const randomday = Math.floor(Math.random() * 30) + 1;
+        leavesarray.push(randomday);
+    }
+    return leavesarray;
 }
