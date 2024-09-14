@@ -203,7 +203,8 @@ function memberclicks() {
             assigncompletework.innerHTML = `<p>Assigned Task is ${count}</p>`;
         });
         completework.addEventListener('click', () => {
-            assigncompletework.innerHTML = `<p>completed Task is ${count-3}</p>`;
+            count = Math.max(0, count - 3);
+            assigncompletework.innerHTML = `<p>completed Task is ${count}</p>`;
         })
     })
 }
