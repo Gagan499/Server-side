@@ -31,13 +31,13 @@ loginForm.addEventListener('submit', (event) => {
                     <h1>Employee Dashboard</h1>
                     <div class="navbar">
                         <ul>
-                            <li><a id="team1">Team 1</a></li>
-                            <li><a id="team2">Team 2</a></li>
-                            <li><a id="team3">Team 3</a></li>
-                            <li><a id="team4">Team 4</a></li>
+                            <li><a id="team1" onclick="team1container" >Team 1</a></li>
+                            <li><a id="team2" onclick="team2container" >Team 2</a></li>
+                            <li><a id="team3" onclick="team3container" >Team 3</a></li>
+                            <li><a id="team4" onclick="team4container" >Team 4</a></li>
                         </ul>
                     </div>
-                    <div class="team1">
+                    <div class="team1" id="teamcontainer">
                         <div class="team-leader">
                             <img src="dummy-person.jpg" alt="Team Leader" class="teamleader">
                             <p>Team Leader</p>
@@ -72,12 +72,12 @@ loginForm.addEventListener('submit', (event) => {
                 </div>
             `;
 
-            const showdetails = document.getElementById('showdetails');
-            const showImage = document.querySelector('.show-image img');
-            const memberDetails = showdetails.querySelector('p');
-            const calendar = document.getElementById('calendar');
-            const leaves = [1, 5,, 7 ,10,11,16, 15]; // Sample leave days
-
+     const showdetails = document.getElementById('showdetails');
+     const showImage = document.querySelector('.show-image img');
+     const memberDetails = showdetails.querySelector('p');
+     const calendar = document.getElementById('calendar');
+     const leaves = [1, 5,, 7 ,10,11,16, 15]; // Sample leave days
+     
             const member1 = document.querySelector('.team-member-1');
             const member2 = document.querySelector('.team-member-2');
             const member3 = document.querySelector('.team-member-3');
@@ -130,7 +130,7 @@ loginForm.addEventListener('submit', (event) => {
                 showImage.src = 'dummy-person.jpg';
                 memberDetails.textContent = 'Charlie';
                 calendar.innerHTML = ''; // Clear previous calendar
-
+                
                 // Generate the calendar
                 for (let i = 1; i <= 30; i++) {
                     const day = document.createElement('div');
@@ -145,7 +145,7 @@ loginForm.addEventListener('submit', (event) => {
                     calendar.appendChild(day);
                 }
             });
-
+            
             document.getElementById('logoutEmployee').addEventListener('click', function () {
                 apppage.innerHTML = originalContent;
                 loginError.textContent = '';
