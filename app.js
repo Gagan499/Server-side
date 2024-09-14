@@ -48,11 +48,11 @@ document.addEventListener('DOMContentLoaded', () => {
                             <p>David</p>
                         </div>
                         <div class="team-member team-member-2">
-                            <img src="dummy-person.jpg" alt="Team Member 1" class="mem-1">
-                            <p>Boob</p>
+                            <img src="dummy-person.jpg" alt="Team Member 2" class="mem-2">
+                            <p>Bob</p>
                         </div>
                         <div class="team-member team-member-3">
-                            <img src="dummy-person.jpg" alt="Team Member 1" class="mem-1">
+                            <img src="dummy-person.jpg" alt="Team Member 3" class="mem-3">
                             <p>Charlie</p>
                         </div>
                     </div>
@@ -67,191 +67,47 @@ document.addEventListener('DOMContentLoaded', () => {
                             <a id="complete">Complete Task</a>
                         </div>
                         <div class="show-count-task" id="show-count-task">
-                        <p></p>
                         </div>
                     </div>
                     
                     <button id="logoutEmployee">Logout</button>
                 </div>
             `;
-                const showdetails = document.getElementById('showdetails');
-                const showImage = document.querySelector('.show-image img');
-                const memberDetails = showdetails.querySelector('p');
-                const calendar = document.getElementById('calendar');
-                const leaves = [1, 5, 7, 10, 11, 16, 15]; // Sample leave days
 
-                const member1 = document.querySelector('.team-member-1');
-                const member2 = document.querySelector('.team-member-2');
-                const member3 = document.querySelector('.team-member-3');
-
-                member1.addEventListener('click', () => {
-                    showdetails.style.display = 'flex';
-                    showdetails.style.height = '245px';
-                    showImage.src = 'dummy-person.jpg';
-                    memberDetails.textContent = 'David';
-                    calendar.innerHTML = ''; // Clear previous calendar
-
-                    // Generate the calendar
-                    for (let i = 1; i <= 30; i++) {
-                        const day = document.createElement('div');
-                        day.classList.add('calendar-day');
-                        if (leaves.includes(i)) {
-                            day.classList.add('leave-taken');
-                            day.textContent = i;
-                        } else {
-                            day.classList.add('no-leave');
-                            day.textContent = i;
-                        }
-                        calendar.appendChild(day);
-                    }
-                });
-                member2.addEventListener('click', () => {
-                    showdetails.style.display = 'flex';
-                    showdetails.style.height = '245px';
-                    showImage.src = 'dummy-person.jpg';
-                    memberDetails.textContent = 'Boob';
-                    calendar.innerHTML = ''; // Clear previous calendar
-
-                    // Generate the calendar
-                    for (let i = 1; i <= 30; i++) {
-                        const day = document.createElement('div');
-                        day.classList.add('calendar-day');
-                        if (leaves.includes(i)) {
-                            day.classList.add('leave-taken');
-                            day.textContent = i;
-                        } else {
-                            day.classList.add('no-leave');
-                            day.textContent = i;
-                        }
-                        calendar.appendChild(day);
-                    }
-                });
-                member3.addEventListener('click', () => {
-                    showdetails.style.display = 'flex';
-                    showdetails.style.height = '245px';
-                    showImage.src = 'dummy-person.jpg';
-                    memberDetails.textContent = 'Charlie';
-                    calendar.innerHTML = ''; // Clear previous calendar
-
-                    // Generate the calendar
-                    for (let i = 1; i <= 30; i++) {
-                        const day = document.createElement('div');
-                        day.classList.add('calendar-day');
-                        if (leaves.includes(i)) {
-                            day.classList.add('leave-taken');
-                            day.textContent = i;
-                        } else {
-                            day.classList.add('no-leave');
-                            day.textContent = i;
-                        }
-                        calendar.appendChild(day);
-                    }
-                });
+                memberclicks(); // Attach event listeners for team members
 
                 document.getElementById('logoutEmployee').addEventListener('click', function () {
                     apppage.innerHTML = originalContent;
                     loginError.textContent = '';
                 });
-
-
             }
         } else {
             loginError.textContent = "Invalid username or password.";
         }
     });
 });
+
 function team1container() {
     const teamcontainer = document.getElementById('teamcontainer');
     teamcontainer.innerHTML = `
-            <div class="team-leader">
-                <img src="dummy-person.jpg" alt="Team Leader" class="teamleader">
-                <p>Leader-Gagan</p>
-            </div>
-            <div class="team-member team-member-1">
-                <img src="dummy-person.jpg" alt="Team Member 1" class="mem-1">
-                <p>David</p>
-            </div>
-            <div class="team-member team-member-2">
-                <img src="dummy-person.jpg" alt="Team Member 1" class="mem-1">
-                <p>Boob</p>
-            </div>
-            <div class="team-member team-member-3">
-                <img src="dummy-person.jpg" alt="Team Member 1" class="mem-1">
-                <p>Charlie</p>
-            </div>
-        `;
+        <div class="team-leader">
+            <img src="dummy-person.jpg" alt="Team Leader" class="teamleader">
+            <p>Leader-Gagan</p>
+        </div>
+        <div class="team-member team-member-1">
+            <img src="dummy-person.jpg" alt="Team Member 1" class="mem-1">
+            <p>David</p>
+        </div>
+        <div class="team-member team-member-2">
+            <img src="dummy-person.jpg" alt="Team Member 2" class="mem-2">
+            <p>Bob</p>
+        </div>
+        <div class="team-member team-member-3">
+            <img src="dummy-person.jpg" alt="Team Member 3" class="mem-3">
+            <p>Charlie</p>
+        </div>
+    `;
     memberclicks(); // Attach event listeners to team members
-}
-// Function for team 2 container (similar to team1container)
-function team2container() {
-    const teamcontainer = document.getElementById('teamcontainer');
-    teamcontainer.innerHTML = `
-<div class="team-leader">
-    <img src="dummy-person.jpg" alt="Team Leader" class="teamleader">
-    <p>Leader-bilaskhan</p>
-</div>
-<div class="team-member team-member-1">
-    <img src="dummy-person.jpg" alt="Team Member 1" class="mem-1">
-    <p>Adam</p>
-</div>
-<div class="team-member team-member-2">
-    <img src="dummy-person.jpg" alt="Team Member 2" class="mem-2">
-    <p>Eve</p>
-</div>
-<div class="team-member team-member-3">
-    <img src="dummy-person.jpg" alt="Team Member 3" class="mem-3">
-    <p>Noah</p>
-</div>
-`;
-    memberclicks();
-}
-
-// Define team3container similarly
-function team3container() {
-    const teamcontainer = document.getElementById('teamcontainer');
-    teamcontainer.innerHTML = `
-<div class="team-leader">
-    <img src="dummy-person.jpg" alt="Team Leader" class="teamleader">
-    <p>Leader-Armanpreet Kaur</p>
-</div>
-<div class="team-member team-member-1">
-    <img src="dummy-person.jpg" alt="Team Member 1" class="mem-1">
-    <p>John</p>
-</div>
-<div class="team-member team-member-2">
-    <img src="dummy-person.jpg" alt="Team Member 2" class="mem-2">
-    <p>Jane</p>
-</div>
-<div class="team-member team-member-3">
-    <img src="dummy-person.jpg" alt="Team Member 3" class="mem-3">
-    <p>Smith</p>
-</div>
-`;
-    memberclicks();
-}
-
-// Define team4container similarly
-function team4container() {
-    const teamcontainer = document.getElementById('teamcontainer');
-    teamcontainer.innerHTML = `
-<div class="team-leader">
-    <img src="dummy-person.jpg" alt="Team Leader" class="teamleader">
-    <p>Leader-Jashan</p>
-</div>
-<div class="team-member team-member-1">
-    <img src="dummy-person.jpg" alt="Team Member 1" class="mem-1">
-    <p>Alice</p>
-</div>
-<div class="team-member team-member-2">
-    <img src="dummy-person.jpg" alt="Team Member 2" class="mem-2">
-    <p>Bob</p>
-</div>
-<div class="team-member team-member-3">
-    <img src="dummy-person.jpg" alt="Team Member 3" class="mem-3">
-    <p>Charlie</p>
-</div>
-`;
-    memberclicks();
 }
 
 function memberclicks() {
@@ -259,40 +115,37 @@ function memberclicks() {
     const showImage = document.querySelector('.show-image img');
     const memberDetails = showdetails.querySelector('p');
     const calendar = document.getElementById('calendar');
-    const leaves = [1, 5, 7, 10, 11, 16, 15];
+    const leaves = [1, 5, 7, 10, 11, 16, 15]; // Sample leave days
+
     const members = document.querySelectorAll('.team-member');
     const assignwork = document.getElementById('assign');
-    const completework  = document.getElementById('complete');
-    const assigncomletework = document.getElementById('show-count-task');
-    const assigncomleteworkcontent = assigncomletework.querySelector('p')
+    const completework = document.getElementById('complete');
+    const assigncompletework = document.getElementById('show-count-task');
     let count = 5;
+
     members.forEach(member => {
         member.addEventListener('click', () => {
             const name = member.querySelector('p').textContent;
             showdetailsfunc(name, showImage, memberDetails, calendar, leaves);
-        })
-        function updateTaskCount(action) {
-            if (action === 'assign') {
-                count += 4; 
-            } else if (action === 'complete') {
-                count -= 2;             }
-            assigncomleteworkcontent.textContent = `${currentName} has Assigned Task is ${count}`;
-        }
-    
-        assignwork.addEventListener('click', () => updateTaskCount('assign'));
-        completework.addEventListener('click', () => updateTaskCount('complete'));
+        });
     });
 
+    assignwork.addEventListener('click', (event) => {
+        event.preventDefault();
+        assigncompletework.innerHTML = `<p>Assigned Task is ${count + 2}</p>`;
+    });
+    completework.addEventListener('click',(event)=>{
+        event.preventDefault();
+        assigncompletework.innerHTML = `<p>completed Task is ${count -2}</p>`;
+    })
 }
 
 function showdetailsfunc(name, showImage, memberDetails, calendar, leaves) {
-    const showdetails = document.getElementById('showdetails');
     showdetails.style.display = 'flex';
     showdetails.style.height = '245px';
     showImage.src = 'dummy-person.jpg';
     memberDetails.textContent = name;
-    calendar.innerHTML = '';
-
+    calendar.innerHTML = ''; // Clear previous calendar
 
     for (let i = 1; i <= 30; i++) {
         const day = document.createElement('div');
