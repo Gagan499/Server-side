@@ -84,10 +84,11 @@ loginForm.addEventListener('submit', (event) => {
             
             member1.addEventListener('click', () => {
                 showdetails.style.display = 'flex';
+                showdetails.style.height='245px';
                 showImage.src = 'dummy-person.jpg';
                 memberDetails.textContent = 'Team Member 1 details';
                 calendar.innerHTML = ''; // Clear previous calendar
-
+                
                 // Generate the calendar
                 for (let i = 1; i <= 30; i++) {
                     const day = document.createElement('div');
@@ -104,10 +105,11 @@ loginForm.addEventListener('submit', (event) => {
             });
             member2.addEventListener('click', () => {
                 showdetails.style.display = 'flex';
+                showdetails.style.height='245px';
                 showImage.src = 'dummy-person.jpg';
                 memberDetails.textContent = 'Team Member 1 details';
                 calendar.innerHTML = ''; // Clear previous calendar
-
+                
                 // Generate the calendar
                 for (let i = 1; i <= 30; i++) {
                     const day = document.createElement('div');
@@ -124,6 +126,7 @@ loginForm.addEventListener('submit', (event) => {
             });
             member3.addEventListener('click', () => {
                 showdetails.style.display = 'flex';
+                showdetails.style.height='245px';
                 showImage.src = 'dummy-person.jpg';
                 memberDetails.textContent = 'Team Member 1 details';
                 calendar.innerHTML = ''; // Clear previous calendar

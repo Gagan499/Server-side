@@ -45,6 +45,7 @@ body {
 .team-member {
     margin: 10px;
     text-align: center;
+    /* height: 275px; */
 }
 
 .team-leader img,
@@ -69,7 +70,7 @@ body {
 
 .show-image p {
     position: absolute;
-    top: 82%;
+    top: 75%;
 }
 .show-image img {
     width: 150px;
@@ -86,8 +87,8 @@ body {
     max-width: 272px;
     margin-top: 20px;
     position: absolute;
-    top: 55%;
-    right: 25%;
+    top: 50%;
+    right: 28%;
 }
 
 .calendar-day {
@@ -116,5 +117,5 @@ body {
     width: 29%;
     position: absolute;
     left: 36%;
-    bottom: 35px;
+    bottom: 65px;
 }
