@@ -44,15 +44,15 @@ loginForm.addEventListener('submit', (event) => {
                         </div>
                         <div class="team-member team-member-1">
                             <img src="dummy-person.jpg" alt="Team Member 1" class="mem-1">
-                            <p>Team Member 1</p>
+                            <p>David</p>
                         </div>
                         <div class="team-member team-member-2">
                             <img src="dummy-person.jpg" alt="Team Member 1" class="mem-1">
-                            <p>Team Member 1</p>
+                            <p>Boob</p>
                         </div>
                         <div class="team-member team-member-3">
                             <img src="dummy-person.jpg" alt="Team Member 1" class="mem-1">
-                            <p>Team Member 1</p>
+                            <p>Charlie</p>
                         </div>
                     </div>
                     <div id="showdetails" style="display: none;">
@@ -86,7 +86,7 @@ loginForm.addEventListener('submit', (event) => {
                 showdetails.style.display = 'flex';
                 showdetails.style.height='245px';
                 showImage.src = 'dummy-person.jpg';
-                memberDetails.textContent = 'Team Member 1 details';
+                memberDetails.textContent = 'David';
                 calendar.innerHTML = ''; // Clear previous calendar
                 
                 // Generate the calendar
@@ -107,7 +107,7 @@ loginForm.addEventListener('submit', (event) => {
                 showdetails.style.display = 'flex';
                 showdetails.style.height='245px';
                 showImage.src = 'dummy-person.jpg';
-                memberDetails.textContent = 'Team Member 1 details';
+                memberDetails.textContent = 'Boob';
                 calendar.innerHTML = ''; // Clear previous calendar
                 
                 // Generate the calendar
@@ -128,7 +128,7 @@ loginForm.addEventListener('submit', (event) => {
                 showdetails.style.display = 'flex';
                 showdetails.style.height='245px';
                 showImage.src = 'dummy-person.jpg';
-                memberDetails.textContent = 'Team Member 1 details';
+                memberDetails.textContent = 'Charlie';
                 calendar.innerHTML = ''; // Clear previous calendar
 
                 // Generate the calendar
