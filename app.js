@@ -109,7 +109,76 @@ function team1container() {
     `;
     memberclicks(); // Attach event listeners to team members
 }
+function team2container() {
+    const teamcontainer = document.getElementById('teamcontainer');
+    teamcontainer.innerHTML = ` 
+        <div class="team-leader">
+            <img src="dummy-person.jpg" alt="Team Leader" class="teamleader">
+            <p>Leader-bilaskhan</p>
+        </div>
+        <div class="team-member team-member-1">
+            <img src="dummy-person.jpg" alt="Team Member 1" class="mem-1">
+            <p>Adam</p>
+        </div>
+        <div class="team-member team-member-2">
+            <img src="dummy-person.jpg" alt="Team Member 2" class="mem-2">
+            <p>Eve</p>
+        </div>
+        <div class="team-member team-member-3">
+            <img src="dummy-person.jpg" alt="Team Member 3" class="mem-3">
+            <p>Noah</p>
+        </div> `
+        ;
+    memberclicks();
+}
 
+// Define team3container similarly
+function team3container() {
+    const teamcontainer = document.getElementById('teamcontainer');
+    teamcontainer.innerHTML = `
+        <div class="team-leader">
+            <img src="dummy-person.jpg" alt="Team Leader" class="teamleader">
+            <p>Leader-Armanpreet Kaur</p>
+        </div>
+        <div class="team-member team-member-1">
+            <img src="dummy-person.jpg" alt="Team Member 1" class="mem-1">
+            <p>John</p>
+        </div>
+        <div class="team-member team-member-2">
+            <img src="dummy-person.jpg" alt="Team Member 2" class="mem-2">
+            <p>Jane</p>
+        </div>
+        <div class="team-member team-member-3">
+            <img src="dummy-person.jpg" alt="Team Member 3" class="mem-3">
+            <p>Smith</p>
+        </div>  `
+        ;
+    memberclicks();
+}
+
+// Define team4container similarly
+function team4container() {
+    const teamcontainer = document.getElementById('teamcontainer');
+    teamcontainer.innerHTML = ` 
+        <div class="team-leader">
+            <img src="dummy-person.jpg" alt="Team Leader" class="teamleader">
+            <p>Leader-Jashan</p>
+        </div>
+        <div class="team-member team-member-1">
+            <img src="dummy-person.jpg" alt="Team Member 1" class="mem-1">
+            <p>Alice</p>
+        </div>
+        <div class="team-member team-member-2">
+            <img src="dummy-person.jpg" alt="Team Member 2" class="mem-2">
+            <p>Bob</p>
+        </div>
+        <div class="team-member team-member-3">
+            <img src="dummy-person.jpg" alt="Team Member 3" class="mem-3">
+            <p>Charlie</p>
+        </div>`
+        ;
+    memberclicks();
+}
 function memberclicks() {
     const showdetails = document.getElementById('showdetails');
     const showImage = document.querySelector('.show-image img');
@@ -134,9 +203,9 @@ function memberclicks() {
         event.preventDefault();
         assigncompletework.innerHTML = `<p>Assigned Task is ${count + 2}</p>`;
     });
-    completework.addEventListener('click',(event)=>{
+    completework.addEventListener('click', (event) => {
         event.preventDefault();
-        assigncompletework.innerHTML = `<p>completed Task is ${count -2}</p>`;
+        assigncompletework.innerHTML = `<p>completed Task is ${count - 2}</p>`;
     })
 }
 
