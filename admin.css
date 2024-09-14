@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#app {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    /* background: transparent; */
+    }
+
+    html {
+        display: flex;
+        width: 100%;
+        min-height: 100vh;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .admindashboard {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: auto;
+        max-width: 1200px;
+        margin-left: -35%;
+    }
+    
+    .navbar-admin {
+        margin: 8px 0px;
+        padding: 10px;
+        width: 20%;
+        min-height: 250px;
+        text-align: center;
+    }
+    .navbar-admin ul{
+        text-decoration: none;
+        list-style: none;
+    }
+    .navbar-admin ul a {
+        display: flex;
+        margin-bottom: 10px;
+        margin-top: 5px;
+        cursor: pointer;
+    }
+    div#team-admin {
+        width: 75%;
+        height: auto;
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    
+    div#team1-admin {
+        display: flex;
+        justify-content: space-around;
+        align-items: baseline;
+        width: 320px;
+    }
+    
+    .leader-admin {
+        width: 30%;
+        height: auto;
+        text-align: justify;
+        margin-left: 10px;
+        margin-right: 25px;
+        margin-top: 22px;
+    }
+    
+    .member-admin {
+        width: 30%;
+        height: auto;
+        text-align: justify;
+        margin-left: 10px;
+        margin-right: 25px;
+    }
+    img{
+        width: 100px;
+        height: 103px;
+        border-radius: 50%;
+    }
+
+    .leader-admin p,.member-admin p{
+        text-align: center;
+    }
+    .showcontainer-admin{
+        width: 100%;
+    }
+    #showdetails-admin{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }

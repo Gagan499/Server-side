@@ -21,8 +21,53 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (user) {
             if (user.role === 'admin') {
-                apppage.innerHTML = ` Admin Dashboard HTML code here `;
-                document.getElementById('logoutAdmin').addEventListener('click', function () {
+                apppage.innerHTML = `
+                <div class="admindashboard">
+            <div class="navbar-admin">
+                <ul>
+                    <li><a id="team-1-admin" onclick="teamcontainer1()">Team 1</a></li>
+                    <li><a id="team-2-admin" onclick="teamcontainer2()">Team 2</a></li>
+                    <li><a id="team-3-admin" onclick="teamcontainer3()">Team 3</a></li>
+                    <li><a id="team-4-admin" onclick="teamcontainer4()">Team 4</a></li>
+                </ul>
+            </div>
+            <div id="team-admin">
+                <div id="team1-admin">
+                    <div class="leader-admin">
+                        <img src="dummy-person.jpg">
+                        <p>Leader-Gagan</p>
+                    </div>
+                    <div class="member-admin">
+                        <img src="dummy-person.jpg">
+                        <p>David</p>
+                    </div>
+                    <div class="member-admin">
+                        <img src="dummy-person.jpg">
+                        <p>Bob</p>
+                    </div>
+                    <div class="member-admin">
+                        <img src="dummy-person.jpg">
+                        <p>Charlie</p>
+                    </div>
+                </div>
+            </div>
+            <div class="showcontainer-admin" style="display: none;">
+                <div id="showdetails-admin">
+                    <div class="calendar" id="calendar-admin"></div>
+                    <div class="show-image-details-admin">
+                        <img src="">
+                        <p></p>
+                    </div>
+                    <div class="navbar-showdetils-admin">
+                        <a id="progress">Progress</a>
+                        <a id="application">Application</a>
+                    </div>
+                </div>
+            </div>
+            <button id="logoutadmin">Logout</button>
+        </div>`;
+
+                document.getElementById('logoutadmin').addEventListener('click', function () {
                     apppage.innerHTML = originalContent;
                     loginError.textContent = '';
                 });
