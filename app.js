@@ -63,10 +63,12 @@ document.addEventListener('DOMContentLoaded', () => {
                             <p>Member Details</p>
                         </div>
                         <div class="assign-complete-task">
-                            <p>Assign Task</p>
-                            <p>Complete Task</p>
+                            <a id="assign">Assign Task</a>
+                            <a id="complete">Complete Task</a>
                         </div>
-                        <div class="show-count-task"></div>
+                        <div class="show-count-task" id="show-count-task">
+                        <p></p>
+                        </div>
                     </div>
                     
                     <button id="logoutEmployee">Logout</button>
@@ -259,12 +261,28 @@ function memberclicks() {
     const calendar = document.getElementById('calendar');
     const leaves = [1, 5, 7, 10, 11, 16, 15];
     const members = document.querySelectorAll('.team-member');
+    const assignwork = document.getElementById('assign');
+    const completework  = document.getElementById('complete');
+    const assigncomletework = document.getElementById('show-count-task');
+    const assigncomleteworkcontent = assigncomletework.querySelector('p')
+    let count = 5;
     members.forEach(member => {
         member.addEventListener('click', () => {
             const name = member.querySelector('p').textContent;
             showdetailsfunc(name, showImage, memberDetails, calendar, leaves);
-        });
-})
+        })
+        function updateTaskCount(action) {
+            if (action === 'assign') {
+                count += 4; 
+            } else if (action === 'complete') {
+                count -= 2;             }
+            assigncomleteworkcontent.textContent = `${currentName} has Assigned Task is ${count}`;
+        }
+    
+        assignwork.addEventListener('click', () => updateTaskCount('assign'));
+        completework.addEventListener('click', () => updateTaskCount('complete'));
+    });
+
 }
 
 function showdetailsfunc(name, showImage, memberDetails, calendar, leaves) {

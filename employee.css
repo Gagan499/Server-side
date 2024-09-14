@@ -120,3 +120,14 @@ body {
     left: 36%;
     bottom: 65px;
 }
+
+div#show-count-task {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 25px;
+    position: relative;
+    bottom: -98%;
+    margin-left: -32%;
+    align-items: center;
+}
