@@ -83,3 +83,38 @@ function teamcontainer4() {
                     </div>
 `;
 }
+function adminmemberclicks() {
+    const showdetailsadmin = document.getElementById('showdetails-admin');
+    const showimageadmin = document.querySelector('.show-image-details-admin img');
+    const calendar = document.getElementById('calender-admin');
+    const membersadmin = document.querySelectorAll('.member-admin');
+
+    membersadmin.forEach(member => {
+        member.addEventListener('click', () => {
+            const leaves = [1, 5, 8, 9, 14, 25];
+            const name = member.querySelector('p').textContent;
+            showadmindetails(name, showdetailsadmin, showimageadmin, calendar, leaves);
+        });
+    });
+}
+
+function showadmindetails(name, showdetailsadmin, showimageadmin, calendar, leaves) {
+    showdetailsadmin.style.display = 'flex';
+    showdetailsadmin.style.height = '245px';
+    showimageadmin.src = 'dummy-person.jpg'; // Ensure dummy-person.jpg is the correct path
+    showdetailsadmin.querySelector('.member-details').textContent = name;
+    calendar.innerHTML = ''; // Clear previous calendar
+
+    for (let i = 1; i <= 30; i++) {
+        const day = document.createElement('div');
+        day.classList.add('calendar-day');
+        if (leaves.includes(i)) {
+            day.classList.add('leave-taken');
+            day.textContent = i;
+        } else {
+            day.classList.add('no-leave');
+            day.textContent = i;
+        }
+        calendar.appendChild(day);
+    }
+}
