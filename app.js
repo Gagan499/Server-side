@@ -258,15 +258,11 @@ function memberclicks() {
     const memberDetails = showdetails.querySelector('p');
     const calendar = document.getElementById('calendar');
     const leaves = [1, 5, 7, 10, 11, 16, 15];
-
-    // const member1 = document.querySelector('.team-member-1');
-    // const member2 = document.querySelector('.team-member-2');
-    // const member3 = document.querySelector('.team-member-3');
     const members = document.querySelectorAll('.team-member');
     members.forEach(member => {
         member.addEventListener('click', () => {
-            const name = member.querySelector('p').textContent; // Extract the text content
-            showdetailsfunc(name, showImage, memberDetails, calendar, leaves); // Pass the name to the function
+            const name = member.querySelector('p').textContent;
+            showdetailsfunc(name, showImage, memberDetails, calendar, leaves);
         });
 })
 }
