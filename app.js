@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
             <div id="team-admin">
                 <div id="team1-admin">
-                    <div class="leader-admin">
+                    <div class="leader-admin" class="member-admin">
                         <img src="dummy-person.jpg">
                         <p>Leader-Gagan</p>
                     </div>
@@ -66,6 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
             <button id="logoutadmin">Logout</button>
         </div>`;
+        adminmemberclicks();
 
                 document.getElementById('logoutadmin').addEventListener('click', function () {
                     apppage.innerHTML = originalContent;

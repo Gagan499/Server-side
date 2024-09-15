@@ -70,7 +70,7 @@ body {
 
 .show-image p {
     position: absolute;
-    top: 75%;
+    top: 72%;
     margin-left: 50px;
 }
 .show-image img {
@@ -88,8 +88,8 @@ body {
     max-width: 272px;
     margin-top: 20px;
     position: absolute;
-    top: 50%;
-    right: 28%;
+    top: 45%;
+    right: 25%;
 }
 
 .calendar-day {
@@ -118,7 +118,7 @@ body {
     width: 29%;
     position: absolute;
     left: 36%;
-    bottom: 100px;
+    bottom: 120px;
 }
 
 div#show-count-task {

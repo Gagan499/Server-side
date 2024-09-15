@@ -88,8 +88,78 @@
     .showcontainer-admin{
         width: 100%;
     }
-    #showdetails-admin{
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-    }
+ 
+    .showcontainer-admin {
+    display: none;
+    margin-top: 20px;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.show-image-details-admin img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.show-image-details-admin p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Calendar Styling */
+#calendar-admin {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 10px;
+    margin-top: 20px;
+}
+/* 
+.calendar-day {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.leave-taken {
+    background-color: red;
+    color: white;
+}
+
+.no-leave {
+    background-color: green;
+    color: white;
+} */
+
+/* Progress and Application Links */
+.navbar-showdetils-admin a {
+    text-decoration: none;
+    margin-right: 10px;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.navbar-showdetils-admin a:hover {
+    color: #0056b3;
+}
+
+/* Logout Button */
+#logoutadmin {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#logoutadmin:hover {
+    background-color: #c82333;
+}
